@@ -41,8 +41,7 @@ SELECT *FROM sales_dataset_rfm_prj
 
 ALTER TABLE sales_dataset_rfm_prj
 ADD column contactlastname VARCHAR(20),
-ADD column contactfirstname VARCHAR(20;
-
+ADD column contactfirstname VARCHAR(20);
 
 select email,
 position('@' in email)
@@ -50,8 +49,8 @@ from customer;
 
 UPDATE sales_dataset_rfm_prj
 SET 
-    contactfirstname = LEFT(contactfullname, POSITION('-' IN contactfullname) - 1),
-    contactlastname = RIGHT(contactfullname, LENGTH(contactfullname) - POSITION('-' IN contactfullname));
+    contactlastname = LEFT(contactfullname, POSITION('-' IN contactfullname) - 1),
+    contactfirstname = RIGHT(contactfullname, LENGTH(contactfullname) - POSITION('-' IN contactfullname));
 
 UPDATE sales_dataset_rfm_prj
 SET
