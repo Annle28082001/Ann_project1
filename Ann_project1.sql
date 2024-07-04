@@ -128,4 +128,9 @@ SET QUANTITYORDERED=(SELECT avg(QUANTITYORDERED)
 from sales_dataset_rfm_prj)
 WHERE QUANTITYORDERED IN (SELECT QUANTITYORDERED from TWT_outliner)
 
+6)
+SELECT *
+INTO sales_dataset_rfm_prj_clean 
+FROM sales_dataset_rfm_prj
+
 
